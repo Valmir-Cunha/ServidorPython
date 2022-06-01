@@ -1,0 +1,12 @@
+FROM python:3-slim
+
+#Seleciona o local da pasta
+WORKDIR /app-serv 
+# Instala um biblioteca e copia o script do servidor para o docker
+RUN pip install psutil
+COPY servidor.py .
+
+EXPOSE 33350
+
+# Executa o script
+CMD [ "python3","servidor.py" ]

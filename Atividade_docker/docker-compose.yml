@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  servidor:
+    build: . # compila a imagem 
+    container_name: servidor-redes
+    ports: # faz a configuracoes de portas 
+      - 33350:33350
